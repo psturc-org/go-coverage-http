@@ -111,7 +111,6 @@ jobs:
       - name: Upload unit test coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          token: ${{ secrets.CODECOV_GLOBAL_TOKEN }}
           files: ./coverage-unit.out
           flags: unit-tests
           fail_ci_if_error: false
@@ -119,7 +118,6 @@ jobs:
       - name: Upload E2E coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          token: ${{ secrets.CODECOV_GLOBAL_TOKEN }}
           files: ./coverage-e2e.out
           flags: e2e-tests
           fail_ci_if_error: false
