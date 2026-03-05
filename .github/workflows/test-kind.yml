@@ -111,20 +111,16 @@ jobs:
       - name: Upload unit test coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage-unit.out
           flags: unit-tests
           fail_ci_if_error: false
-        if: github.repository == 'psturc/go-coverage-http' && hashFiles('coverage-unit.out') != ''
 
       - name: Upload E2E coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage-e2e.out
           flags: e2e-tests
           fail_ci_if_error: false
-        if: github.repository == 'psturc/go-coverage-http'
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master

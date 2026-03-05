@@ -33,6 +33,8 @@ FROM alpine:3.19
 
 WORKDIR /app
 
+
+#test
 # Copy the binary
 COPY --from=builder /app/app /app/app
 
