@@ -28,7 +28,6 @@ RUN if [ "$ENABLE_COVERAGE" = "true" ]; then \
         echo "✅ Production build complete (no coverage)"; \
     fi
 
-test
 # Runtime stage
 FROM alpine:3.19
 
