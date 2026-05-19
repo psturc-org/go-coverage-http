@@ -39,6 +39,7 @@ var _ = BeforeSuite(func() {
 	var err error
 
 	// Initialize coverage client
+	// test something
 	coverageClient, err = coverageclient.NewClient(namespace, coverageDir)
 	Expect(err).NotTo(HaveOccurred(), "Failed to create coverage client")
 
