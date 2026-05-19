@@ -35,6 +35,10 @@ func Calculate(a, b int) int {
 	return a + b
 }
 
+func randomFunc(a int) int {
+	return a+1
+}
+
 // HealthHandler handles health check requests
 func HealthHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
